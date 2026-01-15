@@ -51,11 +51,6 @@ export default async function Home() {
                 Get Started Free
               </button>
             </SignUpButton>
-            <SignInButton mode="modal">
-              <button className="px-8 py-3 text-base font-medium border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
-                Sign In
-              </button>
-            </SignInButton>
           </div>
         </section>
 
