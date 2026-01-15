@@ -123,3 +123,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Clerk Dark Theme - Override CSS Variables */
+:root {
+  --clerk-color-background: #171717 !important;
+  --clerk-color-text: #fafafa !important;
+  --clerk-color-text-secondary: #a1a1a1 !important;
+  --clerk-color-primary: #e5e5e5 !important;
+  --clerk-color-danger: #ff6568 !important;
+  --clerk-color-input-background: #262626 !important;
+  --clerk-color-input-text: #fafafa !important;
+  --clerk-border-radius: 0.625rem !important;
+}
+
+.dark {
+  --clerk-color-background: #171717 !important;
+  --clerk-color-text: #fafafa !important;
+  --clerk-color-text-secondary: #a1a1a1 !important;
+  --clerk-color-primary: #e5e5e5 !important;
+  --clerk-color-danger: #ff6568 !important;
+  --clerk-color-input-background: #262626 !important;
+  --clerk-color-input-text: #fafafa !important;
+  --clerk-border-radius: 0.625rem !important;
+}

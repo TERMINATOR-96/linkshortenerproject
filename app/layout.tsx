@@ -27,6 +27,26 @@ export default function RootLayout({
     <ClerkProvider
       signInFallbackRedirectUrl="/dashboard"
       signUpFallbackRedirectUrl="/dashboard"
+      appearance={{
+        layout: {
+          socialButtonsPlacement: 'bottom',
+          socialButtonsVariant: 'iconButton',
+        },
+        variables: {
+          colorPrimary: '#e5e5e5',
+          colorBackground: '#171717',
+          colorInputBackground: '#262626',
+          colorInputText: '#fafafa',
+          colorText: '#fafafa',
+          colorTextSecondary: '#a1a1a1',
+          colorDanger: '#ff6568',
+          colorSuccess: '#00bb7f',
+          colorWarning: '#f99c00',
+          colorNeutral: '#0a0a0a',
+          borderRadius: '0.625rem',
+          fontFamily: 'var(--font-geist-sans)',
+        },
+      }}
     >
       <html lang="en" className="dark">
         <body
