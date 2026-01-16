@@ -69,6 +69,12 @@ This is **NON-NEGOTIABLE**. The `/docs` directory contains specific implementati
 - Maintain clear separation between business logic and presentation
 - Follow the established project structure
 
+### 5. Routing & Middleware
+- **NEVER use `middleware.ts`** - This is deprecated in Next.js 16 and later versions
+- **ALWAYS use `proxy.ts`** instead for middleware-like functionality
+- The `middleware.ts` pattern is no longer supported in this project's Next.js version
+- All request interception and routing logic should be handled through `proxy.ts`
+
 ## Project Structure
 
 ```

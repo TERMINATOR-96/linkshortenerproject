@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 @import '@clerk/themes/shadcn.css';
 
 @custom-variant dark (&:is(.dark *));
@@ -125,15 +124,15 @@
   }
 }
 
-/* Clerk Dark Theme - Override CSS Variables */
+/* Clerk Theme - Override CSS Variables */
 :root {
-  --clerk-color-background: #171717 !important;
-  --clerk-color-text: #fafafa !important;
-  --clerk-color-text-secondary: #a1a1a1 !important;
-  --clerk-color-primary: #e5e5e5 !important;
-  --clerk-color-danger: #ff6568 !important;
-  --clerk-color-input-background: #262626 !important;
-  --clerk-color-input-text: #fafafa !important;
+  --clerk-color-background: #ffffff !important;
+  --clerk-color-text: #171717 !important;
+  --clerk-color-text-secondary: #737373 !important;
+  --clerk-color-primary: #0070f3 !important;
+  --clerk-color-danger: #ef4444 !important;
+  --clerk-color-input-background: #ffffff !important;
+  --clerk-color-input-text: #171717 !important;
   --clerk-border-radius: 0.625rem !important;
 }
 
@@ -141,9 +140,146 @@
   --clerk-color-background: #171717 !important;
   --clerk-color-text: #fafafa !important;
   --clerk-color-text-secondary: #a1a1a1 !important;
-  --clerk-color-primary: #e5e5e5 !important;
-  --clerk-color-danger: #ff6568 !important;
+  --clerk-color-primary: #0070f3 !important;
+  --clerk-color-danger: #ef4444 !important;
   --clerk-color-input-background: #262626 !important;
   --clerk-color-input-text: #fafafa !important;
   --clerk-border-radius: 0.625rem !important;
+}
+
+/* Clerk Button Overrides for Better Visibility */
+.cl-formButtonPrimary,
+button[data-variant="solid"][data-color="primary"],
+.cl-button[data-variant="solid"] {
+  background-color: #0070f3 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+.cl-formButtonPrimary span,
+button[data-variant="solid"][data-color="primary"] span {
+  color: #ffffff !important;
+}
+
+.cl-formButtonPrimary:hover,
+button[data-variant="solid"][data-color="primary"]:hover {
+  background-color: #0060d1 !important;
+  opacity: 1 !important;
+}
+
+.cl-formButtonPrimary:active,
+button[data-variant="solid"][data-color="primary"]:active {
+  background-color: #0050b3 !important;
+}
+
+.cl-socialButtonsIconButton {
+  border: 1px solid #e5e5e5 !important;
+}
+
+.dark .cl-socialButtonsIconButton {
+  border-color: #404040 !important;
+}
+
+/* Extra specificity for Clerk's internal classes */
+.cl-internal-p6pzjn {
+  background-color: #0070f3 !important;
+  color: #ffffff !important;
+}
+
+.cl-internal-2iusy0 {
+  color: #ffffff !important;
+}
+
+/* Clerk UserButton Menu Styling */
+.cl-userButtonPopoverCard,
+.cl-userButtonPopoverMain,
+[role="dialog"] {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dark .cl-userButtonPopoverCard,
+.dark .cl-userButtonPopoverMain,
+.dark [role="dialog"] {
+  background-color: #1a1a1a !important;
+  border-color: #404040 !important;
+}
+
+/* Menu Items */
+.cl-userButtonPopoverActions,
+.cl-userButtonPopoverActionButton,
+.cl-profileSectionPrimaryButton,
+button[data-variant="ghost"][data-color="primary"],
+button[data-variant="ghost"][data-color="neutral"],
+.cl-internal-a7ubo7 {
+  color: #171717 !important;
+  background-color: transparent !important;
+}
+
+.dark .cl-userButtonPopoverActions,
+.dark .cl-userButtonPopoverActionButton,
+.dark .cl-profileSectionPrimaryButton,
+.dark button[data-variant="ghost"][data-color="primary"],
+.dark button[data-variant="ghost"][data-color="neutral"],
+.dark .cl-internal-a7ubo7 {
+  color: #fafafa !important;
+}
+
+.cl-userButtonPopoverActionButton:hover,
+.cl-profileSectionPrimaryButton:hover,
+button[data-variant="ghost"][data-color="primary"]:hover,
+button[data-variant="ghost"][data-color="neutral"]:hover,
+.cl-internal-a7ubo7:hover {
+  background-color: #f5f5f5 !important;
+  color: #171717 !important;
+}
+
+.dark .cl-userButtonPopoverActionButton:hover,
+.dark .cl-profileSectionPrimaryButton:hover,
+.dark button[data-variant="ghost"][data-color="primary"]:hover,
+.dark button[data-variant="ghost"][data-color="neutral"]:hover,
+.dark .cl-internal-a7ubo7:hover {
+  background-color: #262626 !important;
+  color: #fafafa !important;
+}
+
+/* Sign Out Button - Special Emphasis */
+.cl-userButtonPopoverActionButton__signOut,
+button[data-localization-key*="signOut"],
+.cl-button__signOut {
+  color: #dc2626 !important;
+  font-weight: 500 !important;
+}
+
+.cl-userButtonPopoverActionButton__signOut:hover,
+button[data-localization-key*="signOut"]:hover,
+.cl-button__signOut:hover {
+  background-color: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+.dark .cl-userButtonPopoverActionButton__signOut:hover,
+.dark button[data-localization-key*="signOut"]:hover,
+.dark .cl-button__signOut:hover {
+  background-color: #3f1515 !important;
+  color: #ff6b6b !important;
+}
+
+/* Menu Text */
+.cl-userButtonPopoverActionButtonText {
+  color: inherit !important;
+  font-weight: 500 !important;
+}
+
+/* Override Clerk's internal accent color for better visibility */
+.cl-internal-a7ubo7 {
+  --accent: #171717 !important;
+  --accentHover: #0a0a0a !important;
+}
+
+.dark .cl-internal-a7ubo7 {
+  --accent: #fafafa !important;
+  --accentHover: #ffffff !important;
 }
